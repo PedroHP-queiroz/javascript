@@ -15,15 +15,13 @@
     </div>
     <script>
         function verificar(){
-            var pais = window.document.querySelector('input#pais')
-            pais.innerHTML = `<p>Seu país é</p>`
-            var res = window.document.querySelector('div#res')
-            if (pais == 'Brasil'){
-                innerHTML = `<p>Você é Brasileiro</p>`
-            } else{
-                innerHTML ${pais} != 'Estrangeiro'
-            }
-            res.innerHTML =+ ${pais}
+        var pais1 = window.document.getElementById('pais')
+        var res = window.document.getElementById('res')
+        var vel = String(pais1.value) //tranformação em string criando a variável vel
+        res.innerText = `Seu país é ${vel}`
+        if (vel == 'Brasil') {  
+            res.innerHTML = 'Você é Brasileiro'  
+        }else(res.innerHTML = 'Você é um estrangeiro')
         }
     </script>
 </body>
